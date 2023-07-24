@@ -1,3 +1,13 @@
 export default function Home() {
-  return;
+  return (
+    <>
+      {/* STORIES */}
+
+      {/* POSTS */}
+
+      {/* ACCOUNTS */}
+
+      {/* SUGGESTIONS */}
+    </>
+  );
 }

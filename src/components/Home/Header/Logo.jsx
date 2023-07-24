@@ -15,7 +15,7 @@ const Logo = () => {
         />
       </div>
 
-      <div className="w-12 h-12 lg:hidden relative cursor-pointer my-8">
+      <div className="w-12 h-12 lg:hidden relative cursor-pointer my-6">
         <Image
           className=""
           src={
