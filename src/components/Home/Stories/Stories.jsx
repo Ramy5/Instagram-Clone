@@ -18,7 +18,7 @@ const Stories = () => {
   }, []);
 
   return (
-    <div className="flex items-center overflow-x-scroll scrollbar-none border border-gray-200 rounded-sm bg-white px-4 py-6 mb-8">
+    <div className="flex items-center overflow-x-scroll scrollbar-none border border-gray-200 rounded-sm bg-white px-4 py-6">
       {stories.map((story) => (
         <Story key={story.id} {...story} />
       ))}
