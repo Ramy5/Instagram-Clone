@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .posts__icon {
+    @apply h-7 w-6 cursor-pointer hover:scale-110 duration-300 transition-all hover:text-orange-700;
+  }
+}
