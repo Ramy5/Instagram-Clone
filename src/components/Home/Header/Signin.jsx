@@ -11,7 +11,7 @@ const Signin = () => {
 
       <div className="">
         <Image
-          className="h-12 rounded-full cursor-pointer"
+          className="rounded-full cursor-pointer"
           src="https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-Vector.png"
           alt="User"
           width={45}
