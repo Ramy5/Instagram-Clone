@@ -1,6 +1,7 @@
 import MiniProfile from "@/components/Home/MiniProfile/MiniProfile";
 import Posts from "@/components/Home/Posts/Posts";
 import Stories from "@/components/Home/Stories/Stories";
+import Suggestion from "@/components/Home/Suggestion/Suggestion";
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
           <MiniProfile />
 
           {/* SUGGESTIONS */}
-          <h4>SUGGESTIONS</h4>
+          <Suggestion />
         </div>
       </section>
     </main>
