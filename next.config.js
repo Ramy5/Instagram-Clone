@@ -8,6 +8,8 @@ const nextConfig = {
       "i.pravatar.cc",
       "images.unsplash.com",
       "plus.unsplash.com",
+      "avatars.githubusercontent.com",
+      "lh3.googleusercontent.com",
     ],
   },
 };

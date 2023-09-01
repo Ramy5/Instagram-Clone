@@ -1,14 +1,22 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
+import { useSession } from "next-auth/react";
 
 import PostHeader from "./PostHeader";
 import PostFooter from "./PostFooter";
 
 const Post = ({ userImg, img, username, caption }) => {
+  const { data: session } = useSession();
+
   return (
     <article className="bg-white my-12 rounded-sm border">
       {/* POST HEADER */}
-      <PostHeader username={username} userImg={userImg} />
+      <PostHeader
+        username={session?.user ? session?.user?.name : username}
+        userImg={session?.user ? session?.user?.image : userImg}
+      />
 
       {/* POST BODY OR CONTENT */}
       <Image
@@ -20,7 +28,10 @@ const Post = ({ userImg, img, username, caption }) => {
       />
 
       {/* POST FOOTER */}
-      <PostFooter username={username} caption={caption} />
+      <PostFooter
+        username={session?.user ? session?.user?.name : username}
+        caption={caption}
+      />
     </article>
   );
 };

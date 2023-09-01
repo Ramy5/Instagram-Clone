@@ -1,7 +1,7 @@
 "use client";
 
-import Suggest from "@/components/UI/Suggest";
-import minifaker, { array, jobDescriptor, jobTitle, username } from "minifaker";
+import Suggest from "@/components/Home/Suggestion/Suggest";
+import { array, jobTitle, username } from "minifaker";
 import React, { useEffect, useState } from "react";
 
 const Suggestion = () => {

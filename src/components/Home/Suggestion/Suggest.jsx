@@ -22,6 +22,7 @@ const Suggest = (props) => {
       </div>
 
       <button
+        onClick={() => signOut()}
         className="cursor-pointer text-orange-600 hover:text-orange-700 transition-colors duration-300 font-semibold"
         type="button"
       >
