@@ -10,6 +10,7 @@ const nextConfig = {
       "plus.unsplash.com",
       "avatars.githubusercontent.com",
       "lh3.googleusercontent.com",
+      "platform-lookaside.fbsbx.com",
     ],
   },
 };
