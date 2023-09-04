@@ -23,7 +23,8 @@ const Post = ({ userImg, img, username, caption }) => {
         className="object-cover bg-cover"
         src={img}
         alt="Post"
-        width={1100}
+        layout="responsive"
+        width={1000}
         height={300}
       />
 

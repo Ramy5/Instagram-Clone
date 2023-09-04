@@ -5,25 +5,25 @@ import { HomeIcon } from "@heroicons/react/24/solid";
 import { MdPersonAdd } from "react-icons/md";
 import Image from "next/image";
 import { signIn, signOut, useSession } from "next-auth/react";
+import { useGlobalContext } from "@/components/Context/AppContext";
 
 const Signin = () => {
   const { data: session } = useSession();
+  const {handleOpenImgModel} = useGlobalContext()
 
   return (
     <div className="flex justify-between items-center sm:my-0 order-2 sm:order-3">
       <HomeIcon className="hidden md:inline-flex mx-4 h-6 cursor-pointer transition-all duration-300 ease-in-out hover:scale-125 hover:text-orange-600" />
+      <MdPersonAdd onClick={() => handleOpenImgModel()} className="h-6 w-6 mr-4 cursor-pointer transition-all duration-300 ease-in-out hover:scale-125 hover:text-orange-600" />
 
       {!session?.user && (
-        <>
-          <MdPersonAdd className="h-6 w-6 mr-4 cursor-pointer transition-all duration-300 ease-in-out hover:scale-125 hover:text-orange-600" />
-          <button
-            onClick={() => signIn()}
-            className="cursor-pointer text-orange-600 hover:text-orange-700 transition-colors duration-300 font-semibold"
-            type="button"
-          >
-            Sign In
-          </button>
-        </>
+        <button
+          onClick={() => signIn()}
+          className="cursor-pointer text-orange-600 hover:text-orange-700 transition-colors duration-300 font-semibold"
+          type="button"
+        >
+          Sign In
+        </button>
       )}
 
       {session?.user && (

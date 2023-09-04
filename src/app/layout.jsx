@@ -2,6 +2,7 @@ import HomeHeader from "@/components/Home/Header/HomeHeader";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import SessionProviders from "@/components/Context/SessionProviders";
+import { AppContextProvider } from "@/components/Context/AppContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,8 +21,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${inter.className} bg-gray-50`}>
         <SessionProviders>
-          <HomeHeader />
-          {children}
+          <AppContextProvider>
+            <HomeHeader />
+            {children}
+          </AppContextProvider>
         </SessionProviders>
       </body>
     </html>

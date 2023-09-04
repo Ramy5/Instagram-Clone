@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-const Story = ({ userName, img }) => {
+const Story = ({ userName, img, className }) => {
   return (
     <div className="space-x-3">
       <Image
@@ -11,7 +11,7 @@ const Story = ({ userName, img }) => {
         width={60}
         height={60}
       />
-      <p className="text-sm truncate w-16">{userName}</p>
+      <p className={`${className} text-sm truncate w-16`}>{userName}</p>
     </div>
   );
 };
